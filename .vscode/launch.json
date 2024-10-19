@@ -1,0 +1,74 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Website",
+            "url": "http://localhost:4000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "${env:ProgramFiles(x86)}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**",
+                "<node_internals>/**"
+            ],
+            "server": {
+                "command": "npm run start -- -p 4000"
+            }
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Website (no server)",
+            "url": "http://localhost:4000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "${env:ProgramFiles(x86)}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**",
+                "<node_internals>/**"
+            ],
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server",
+            "runtimeArgs": [
+                "run",
+                "server"
+            ],
+            "runtimeExecutable": "npm",
+            "outputCapture": "std",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**",
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Plugins",
+            "runtimeArgs": [
+                // "--cpu-prof",
+                "${workspaceFolder}/node_modules/hexo/bin/hexo",
+                "generate",
+                "--debug",
+                "--force"
+            ],
+            "outputCapture": "std",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**",
+                "<node_internals>/**"
+            ],
+            "preLaunchTask": "npm: compile-plugins"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Server/Website",
+            "configurations": [
+                "Server",
+                "Website (no server)"
+            ]
+        }
+    ]
+}

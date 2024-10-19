@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "target": "ES6",
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "declaration": true,
+        "types": [
+            "hexo"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
