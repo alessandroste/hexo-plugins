@@ -1,3 +1,9 @@
+menu:
+  Home: /
+
+banner: images/banner.webp
+
 sidebar: left
+
 widgets:
 - category
