@@ -18,8 +18,9 @@ mindmap
 {% endpintora %}
 
 ## Installation
+Currently available at [GitHub registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)
 ```
-npm install @alessandroste/hexo-tag-pintora@1.0.0
+npm install @alessandroste/hexo-tag-pintora
 ```
 ## Configuration
 ### In `_config.yaml`:
