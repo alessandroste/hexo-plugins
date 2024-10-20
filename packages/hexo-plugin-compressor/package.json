@@ -1,0 +1,18 @@
+{
+    "name": "@alessandroste/hexo-plugin-compressor",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "files": [
+        "dist/**"
+    ],
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "micromatch": "^4.0.8"
+    },
+    "devDependencies": {
+        "@types/micromatch": "^4.0.9"
+    }
+}
