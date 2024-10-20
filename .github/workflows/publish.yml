@@ -19,7 +19,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install
       - run: npm run compile-plugins
-      - id: Publish
+      - name: Publish
         shell: bash
         run: .github/workflows/scripts/main.sh
         env:
